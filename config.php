@@ -1,10 +1,10 @@
 <?php
 // Database connection parameters from Elastic Beanstalk environment
-$db_hostname = $_SERVER['RDS_HOSTNAME'];
-$db_port     = $_SERVER['RDS_PORT'];
-$db_database = $_SERVER['RDS_DB_NAME'];
-$db_username = $_SERVER['RDS_USERNAME'];
-$db_password = $_SERVER['RDS_PASSWORD'];
+$db_hostname = getenv("DB_HOST");
+$db_port     = getenv("DB_PORT");
+$db_database = getenv("DB_NAME");
+$db_username = getenv("DB_USER");
+$db_password = getenv("DB_PASS");
 
 // Image upload options
 $storage_option = "hd";
