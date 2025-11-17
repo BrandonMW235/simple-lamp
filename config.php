@@ -1,10 +1,10 @@
 <?php
-// Database connection parameters
-$db_hostname = "localhost";
-$db_port     = 3306;
-$db_database = "simple_lamp";
-$db_username = "username";
-$db_password = "password";
+// Database connection parameters from Elastic Beanstalk environment
+$db_hostname = $_SERVER['RDS_HOSTNAME'];
+$db_port     = $_SERVER['RDS_PORT'];
+$db_database = $_SERVER['RDS_DB_NAME'];
+$db_username = $_SERVER['RDS_USERNAME'];
+$db_password = $_SERVER['RDS_PASSWORD'];
 
 // Image upload options
 $storage_option = "hd";
